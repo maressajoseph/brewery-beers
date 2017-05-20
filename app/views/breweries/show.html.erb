@@ -1,0 +1,16 @@
+<h2><%= @brewery.name %></h2>
+
+<h3>List of all beers in this brewery: </h3>
+
+<% if @brewery.beers.any?  %>
+  <ul>
+    <% @brewery.beers.each do |beer| %>
+      <li><%= beer.name %></li>
+    <% end %>
+  </ul>
+  <% else %>
+    <p>There are no beers in this brewery</p>
+
+<% end %>
+<%= link_to "Edit this brewery", edit_brewery_path(@brewery) %>
+<%= link_to "Delete this brewery", brewery_path(@brewery), method: :delete, data: { confirm: 'Are you sure?' } %>

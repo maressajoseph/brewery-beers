@@ -12,5 +12,7 @@
     <p>There are no beers in this brewery</p>
 
 <% end %>
+<nav>
 <%= link_to "Edit this brewery", edit_brewery_path(@brewery) %>
 <%= link_to "Delete this brewery", brewery_path(@brewery), method: :delete, data: { confirm: 'Are you sure?' } %>
+</nav>

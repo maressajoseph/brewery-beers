@@ -2,13 +2,19 @@
 
 <h1>Breweries</h1>
 
-<% @breweries.each do |brewery| %>
-  <h3><%= link_to brewery.name, brewery_path(brewery) %></h3>
-  <h4><%= brewery.location %></h4>
-  <%= image_tag brewery.img_url %>
-<% end %>
-<br>
-<%= link_to "Create a new brewery", new_brewery_path %>
+<nav>
+  <%= link_to "Create a new brewery", new_brewery_path %>
+  <%= link_to "All beers", beers_path %>
+</nav>
 
-<br>
-<%= link_to "All beers", beers_path %>
+<div class = "brewery_container">
+
+  <% @breweries.each do |brewery| %>
+  <div class = "brewery_box">
+    <h3><%= link_to brewery.name, brewery_path(brewery) %></h3>
+    <h4><%= brewery.location %></h4>
+    <%= image_tag brewery.img_url %>
+  </div>
+
+<% end %>
+</div>

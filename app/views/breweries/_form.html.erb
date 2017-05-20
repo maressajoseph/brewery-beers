@@ -1,0 +1,12 @@
+<%= form_for @brewery do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+
+  <%= f.label :"Image URL" %>
+  <%= f.text_field :img_url %>
+
+  <%= f.submit (@brewery.new_record? ? "Create brewery" : "Update brewery") %>
+<% end %>

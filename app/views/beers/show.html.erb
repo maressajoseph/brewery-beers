@@ -2,6 +2,7 @@
 
 <p>Type: <%= @beer.beer_type %></p>
 <p>ABV: <%= @beer.abv %>%</p>
+<p>Brewery: <%= link_to @brewery.name, brewery_path(@brewery) %></p>
 <%= image_tag @beer.img_url %>
 
 <hr>

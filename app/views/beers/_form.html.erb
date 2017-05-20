@@ -18,9 +18,9 @@
   <%= f.label :img_url %>
   <%= f.text_field :img_url %>
 
-  <%= f.submit (@beer.new_record? ? "Create" : "Update") %>
-
   <%= f.label :brewery_id %>
   <%= f.collection_select(:brewery_id, Brewery.all, :id, :name) %>
+
+  <%= f.submit (@beer.new_record? ? "Create" : "Update") %>
 
 <% end %>

@@ -1,5 +1,5 @@
 <h2><%= @brewery.name %></h2>
-
+<div class = "list_container">
 <h3>List of all beers in this brewery: </h3>
 
 <% if @brewery.beers.any?  %>
@@ -10,7 +10,7 @@
   </ul>
   <% else %>
     <p>There are no beers in this brewery</p>
-
+</div>
 <% end %>
 <nav>
 <%= link_to "Edit this brewery", edit_brewery_path(@brewery) %>

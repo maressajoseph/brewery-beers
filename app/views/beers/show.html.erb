@@ -1,4 +1,10 @@
 <h1> <%= @beer.name %></h1>
 
 <p>Type: <%= @beer.beer_type %></p>
+<p>ABV: <%= @beer.abv %>%</p>
 <%= image_tag @beer.img_url %>
+
+<hr>
+
+<%= link_to "[Edit]", edit_beer_path(@beer.id) %>
+<%= link_to "[Delete]", beer_path(@beer.id), method: :delete, data: { confirm: "Are you sure?" } %>

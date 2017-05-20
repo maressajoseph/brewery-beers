@@ -80,33 +80,38 @@ nav a:hover {
 .list_container{
   margin:3rem;
 }
-ul{
-  display: flex;
-  flex-direction: row;
-}
 
 .list_style{
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 5rem 5rem;
+  width:100%;
+  height:30rem;
   }
 
-  form {
-   margin: 10px 450px;
-   background-color: rgba(128, 128, 128, 0.15);
-   padding:1.5rem;
-   border-radius: 3%;
-   display: flex;
-   flex-direction: column;
-   width: 30%;
-   align-items:stretch;
-   align-self: center;
-  }
+.elements{
+  width: 25rem;
+}
 
-  form label submit {
-   padding: 5px;
-  }
+form {
+  margin: 10px 450px;
+  background-color: rgba(128, 128, 128, 0.15);
+  padding:1.5rem;
+  border-radius: 3%;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items:stretch;
+  align-self: center;
+}
 
-  form ul li {
-   color: red;
-   font-size: 15px;
-   list-style: none;
-  }
+form label submit {
+  padding: 5px;
+}
+
+form ul li {
+  color: red;
+  font-size: 15px;
+  list-style: none;
+}

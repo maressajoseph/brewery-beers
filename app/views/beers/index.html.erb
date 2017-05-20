@@ -1,16 +1,18 @@
 <h1>Beers</h1>
+<nav>
+<%= link_to "Add a new beer", new_beer_path %>
+</nav>
 
 
+<div class="list_style">
 <% @beer.each do |beer| %>
-<ul>
-  <div class="list_style">
+
+
+<ul class= "elements">
 
   <%= link_to beer.name, beer_path(beer.id) %>
-</div>
 </ul>
+
+
 <% end %>
-
-
-<hr>
-
-<%= link_to "Add a new beer", new_beer_path %>
+</div>

@@ -1,16 +1,17 @@
 <h2><%= @brewery.name %></h2>
-<div class = "list_container">
-<h3>List of all beers in this brewery: </h3>
 
-<% if @brewery.beers.any?  %>
-  <ul>
-    <% @brewery.beers.each do |beer| %>
+<div class = "list_container">
+  <h3>List of all beers in this brewery: </h3>
+
+  <% if @brewery.beers.any?  %>
+    <ul>
+      <% @brewery.beers.each do |beer| %>
       <li><%= link_to beer.name, beer_path(beer) %></li>
-    <% end %>
-  </ul>
+  <% end %>
+    </ul>
   <% else %>
     <p>There are no beers in this brewery</p>
-<% end %>
+  <% end %>
 </div>
 <nav>
 <%= link_to "Edit this brewery", edit_brewery_path(@brewery) %>

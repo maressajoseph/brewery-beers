@@ -2,10 +2,15 @@
 
 
 <% @beer.each do |beer| %>
-  <p><%= link_to beer.name, beer_path(beer.id) %></p>
+<ul>
+  <div class="list_style">
+
+  <%= link_to beer.name, beer_path(beer.id) %>
+</div>
+</ul>
 <% end %>
 
 
 <hr>
 
-<%= link_to "[New Beer]", new_beer_path %>
+<%= link_to "Add a new beer", new_beer_path %>

@@ -21,6 +21,6 @@
   <%= f.label :brewery_id %>
   <%= f.collection_select(:brewery_id, Brewery.all, :id, :name) %>
 
-  <%= f.submit (@beer.new_record? ? "Create" : "Update") %>
+  <%= f.submit (@beer.new_record? ? "Create beer" : "Update beer") %>
 
 <% end %>

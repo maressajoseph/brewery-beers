@@ -33,7 +33,14 @@ class BreweriesController < ApplicationController
       redirect_to @brewery
     else
       render "edit"
-    end    
+    end
+  end
+
+  def destroy
+    find_brewery
+
+    @brewery.destroy
+    redirect_to breweries_path, notice: "Brewery has been deleted"
   end
 
   private

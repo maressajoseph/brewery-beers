@@ -1,0 +1,26 @@
+<%= form_for @beer do |f| %>
+
+  <ul>
+     <% @beer.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+     <% end %>
+  </ul>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :beer_type %>
+  <%= f.text_field :beer_type %>
+
+  <%= f.label :abv %>
+  <%= f.number_field :abv %>
+
+  <%= f.label :img_url %>
+  <%= f.text_field :img_url %>
+
+  <%= f.submit (@beer.new_record? ? "Create" : "Update") %>
+
+  <%= f.label :brewery_id %>
+  <%= f.collection_select(:brewery_id, Brewery.all, :id, :name) %>
+
+<% end %>
